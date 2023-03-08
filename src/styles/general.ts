@@ -1,8 +1,9 @@
-import Image from 'next/image'
+import Image from 'next/image';
 import styled from "styled-components";
-import { AiOutlineQuestionCircle } from 'react-icons/ai'
-import { HiOutlineTrash } from 'react-icons/hi'
 import TextField from "@mui/material/TextField";
+// resources
+import { AiOutlineQuestionCircle } from 'react-icons/ai';
+import { HiOutlineTrash } from 'react-icons/hi';
 
 export const AssetsStyle = {
   logo: styled(Image)`
@@ -65,4 +66,4 @@ export const AssetsStyle = {
       transition: width 0.5s ease-in-out;
     }
   `,
-}
+};

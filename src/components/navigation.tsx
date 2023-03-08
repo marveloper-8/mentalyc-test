@@ -1,5 +1,7 @@
+// styles
 import { NavigationStyle } from '@/styles/components'
 import { AssetsStyle } from '@/styles/general';
+// resources
 import logo from '../assets/icons/logo.svg'
 
 const NavigationComponent = () => (

@@ -1,13 +1,14 @@
 import { FC } from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
-// styles
-import { AssetsStyle } from '@/styles/general'
-import { ButtonStyle, ModalStyle } from '@/styles/widgets'
-// components
-import { noteTypes } from '@/assets/data';
-import { makeStyles } from '@mui/styles';
 import { FormControl } from '@mui/material';
+// styles
+import { AssetsStyle } from '@/styles/general';
+import { ButtonStyle, ModalStyle } from '@/styles/widgets';
+import { makeStyles } from '@mui/styles';
+// components
 import PopupWidget from '@/widgets/popup';
+// resources
+import { noteTypes } from '@/assets/data';
 
 
 const useStyles: any = makeStyles((theme: any) => ({
@@ -32,7 +33,7 @@ const UploadComponent: FC<any> = ({ open, handleClose, value, updateValue, uploa
   const classes = useStyles();
 
   const updateNoteType = (e: any, newValue: any) => {
-    updateValue({ ...value, noteType: newValue })
+    updateValue({ ...value, noteType: newValue });
   }
 
   const updateClient = (e: any) => {

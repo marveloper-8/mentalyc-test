@@ -40,11 +40,9 @@ const ProgressDetailsComponent: FC<any> = ({ open, handleClose, data, progress, 
         </CardStyle.details>
       ))}
         
-      {/* <ButtonStyle.wrapper onClick={handleClose} alt> */}
-      <ButtonStyle.wrapper onClick={handleClose} alt>
+      <ButtonStyle.wrapper onClick={() => removeItem(data.id)} alt>
         Delete
       </ButtonStyle.wrapper>
-      
     </PopupWidget>
   )
 }

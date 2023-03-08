@@ -11,4 +11,4 @@ export const DashboardStyle = {
   title: styled.h3`
     margin: 24px 0;
   `,
-}
+};

@@ -1,7 +1,7 @@
-
 import { FC } from 'react';
 // styles
 import { TableStyle } from '@/styles/components'
+// components
 import TableRowComponent from './table-row';
 
 const TableComponent: FC<any> = ({data, removeItem}) => {

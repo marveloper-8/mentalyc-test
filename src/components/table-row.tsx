@@ -1,4 +1,3 @@
-
 import { FC, useEffect, useState } from 'react';
 // styles
 import { TableStyle } from '@/styles/components'
@@ -7,7 +6,6 @@ import { AssetsStyle } from '@/styles/general';
 import ProgressDetailsComponent from './progress-details';
 
 const TableRowComponent: FC<any> = ({data, removeItem}) => {
-  // const handleClose = () => alert('hi');
   const [progress, setProgress] = useState(data.noteType.progress);
 
   useEffect(() => {
@@ -24,11 +22,10 @@ const TableRowComponent: FC<any> = ({data, removeItem}) => {
   }, [progress])
 
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const togglePopup = () => setOpen(!open); // i used this because there's a bug with the Material UI popup
 
   return (
-    <TableStyle.tr onClick={handleOpen} alt>
+    <TableStyle.tr onClick={togglePopup} alt>
       <TableStyle.td>{data.client}</TableStyle.td>
       <TableStyle.td desktop>{data.noteType.value}</TableStyle.td>
       <TableStyle.td progressWrapper>
@@ -38,7 +35,7 @@ const TableRowComponent: FC<any> = ({data, removeItem}) => {
       <ProgressDetailsComponent
         data={data}
         open={open}
-        handleClose={handleClose}
+        handleClose={togglePopup}
         progress={progress}
         removeItem={removeItem}
       />

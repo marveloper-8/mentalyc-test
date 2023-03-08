@@ -1,4 +1,3 @@
-
 import { FC } from 'react';
 // styles
 import { CardStyle } from '@/styles/components'

@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { AiOutlineClose } from 'react-icons/ai'
+// resources
+import { AiOutlineClose } from 'react-icons/ai';
 
 export const ButtonStyle = {
   wrapper: styled.button<any>`
@@ -11,12 +12,13 @@ export const ButtonStyle = {
       border: 0;
       outline: none;
       display: block;
+      color: var(--white-color);
       ${props.short ? 'margin: auto' : 'width: 100%'};
       ${!props.invalid && 'cursor: pointer'};
       ${props.alt && 'margin-top: 30px'};
     `};
   `,
-}
+};
 
 export const ModalStyle = {
   wrapper: styled.section`
@@ -39,4 +41,4 @@ export const ModalStyle = {
     color: var(--grey-color);
     margin: 10px 0;
   `,
-}
+};
